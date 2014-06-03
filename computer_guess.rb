@@ -1,15 +1,13 @@
 class ComputerGuess
-  
   def initialize
     @number_of_guesses = 5
     @high_ans = 100
     @low_ans = 1
-    # move this to a method check that the number is between 1 and 100
     puts "Think a number between 1 and 100, I'm going to try to guess it"
     guess
   end
 
-  def check_answer_with_user # ask about using a local or instance variable
+  def check_answer_with_user
     puts "I think your number is #{@guessed_number}!"
     puts 'If thats correct, enter Y.'
     puts 'If your number is higher, enter H'
