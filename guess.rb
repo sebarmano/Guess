@@ -13,20 +13,29 @@ class Guess
     gets.chomp.to_i
   end
 
+  def user_guess_correct?
+    if @user_number == @answer
+      puts "Good job! My number was #{@answer}!"
+      return true
+    elsif @user_number < @answer
+      puts 'Mmmm nope, my number is higher...'
+      return false
+    elsif @user_number > @answer
+      puts "I'm sorry, my number is lower..."
+      return false
+    end
+  end
+
   def game
     while @guesses_left != 0
-      user_number = ask_user_number
-      if user_number == @answer
-        puts "Good job! My number was #{@answer}!"
+      @user_number = ask_user_number
+      if !user_guess_correct?
+        @guesses_left -= 1
+        if @guesses_left != 0
+          puts "Try again! You still have #{@guesses_left} guesses"
+        end
+      else
         return
-      elsif user_number < @answer
-        puts 'Mmmm nope, my number is higher...'
-      elsif user_number > @answer
-        puts "I'm sorry, my number is lower..."
-      end
-      @guesses_left -= 1
-      if @guesses_left != 0
-        puts "Try again! You still have #{@guesses_left} guesses"
       end
     end
     puts "You lost! My number was #{@answer}"
