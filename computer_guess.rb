@@ -12,7 +12,7 @@ class ComputerGuess
     puts 'If thats correct, enter Y.'
     puts 'If your number is higher, enter H'
     puts 'If your number is lower, enter L'
-    gets.chomp.upcase!
+    gets.chomp.upcase
   end
 
   def check_answer
