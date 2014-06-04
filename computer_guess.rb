@@ -4,7 +4,6 @@ class ComputerGuess
     @high_ans = 100
     @low_ans = 1
     puts "Think a number between 1 and 100, I'm going to try to guess it"
-    guess
   end
 
   def check_answer_with_user
@@ -49,4 +48,5 @@ class ComputerGuess
   end
 end
 
-ComputerGuess.new
+game = ComputerGuess.new
+game.guess

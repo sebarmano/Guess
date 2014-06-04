@@ -4,8 +4,7 @@ class Guess
     @guesses_left = 5
     puts "I've already chosen a number between 1 and 100..." \
       " let's see if you can guess it"
-    puts @answer # line for testing
-    game
+    # puts @answer  line for testing
   end
 
   def ask_user_number
@@ -26,7 +25,7 @@ class Guess
     end
   end
 
-  def game
+  def play
     while @guesses_left != 0
       @user_number = ask_user_number
       if !user_guess_correct?
@@ -42,4 +41,5 @@ class Guess
   end
 end
 
-Guess.new
+game = Guess.new
+game.play
