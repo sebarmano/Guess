@@ -5,7 +5,7 @@ This is a guessing game, there are two game modes.
 
 Player Guess
 ------------
-In this mode the computer chooses a number at random between 0 and 100.
+In this mode the computer chooses a number at random between 1 and 100.
 The user has 5 tries to guess it. The computer will tell if the user guess is too low or too high.
 
 To play this game mode enter: `ruby guess.rb`
