@@ -32,7 +32,7 @@ class ComputerGuess
   end
 
   def guess
-    while @number_of_guesses != 0
+    until @number_of_guesses == 0
       @guessed_number = ((@high_ans - @low_ans) / 2) + @low_ans
       check = check_answer
       if check == 1 # answer is higher

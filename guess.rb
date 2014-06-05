@@ -26,13 +26,11 @@ class Guess
   end
 
   def play
-    while @guesses_left != 0
+    until @guesses_left == 0
       @user_number = ask_user_number
       if !user_guess_correct?
         @guesses_left -= 1
-        if @guesses_left != 0
-          puts "Try again! You still have #{@guesses_left} guesses"
-        end
+        puts "Try again! You still have #{@guesses_left} guesses" if @guesses_left != 0
       else
         return
       end
